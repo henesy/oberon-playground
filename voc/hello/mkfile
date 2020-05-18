@@ -1,0 +1,15 @@
+
+CFILES = hello.c
+
+TARG = hello
+
+all:V: hello
+
+hello:V: $CFILES
+
+%.c:
+	voc -M $stem.mod
+
+clean: 
+	rm *.c $TARG
+
